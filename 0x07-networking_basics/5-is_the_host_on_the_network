@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Check if there exist an IP address
+if [ $# -ne 1 ]; then
+	echo "Usage: $0 <IP_address>"
+	exit 1
+fi
+# First argument
+ip_address=$1
+
+# Ping the specific IP address
+ping -5 $ip_address
+exit $
